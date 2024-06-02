@@ -1,7 +1,11 @@
-﻿namespace WebApplication3.Entities.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication3.Entities.Models;
 
 public class Prescription
 {
+    
+    [Key]
     public int IdPrescription { get; set; }
     public DateTime Date { get; set; }
     public DateTime DueDate { get; set; }

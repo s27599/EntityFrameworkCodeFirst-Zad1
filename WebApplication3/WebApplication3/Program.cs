@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using WebApplication3.Entities;
 
@@ -13,7 +14,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ClinicDbContext>(opt =>
 {
-    string connString = builder.Configuration.GetConnectionString("DbConnString");
+    string? connString = builder.Configuration.GetConnectionString("DbConnString");
     opt.UseSqlServer(connString);
 });
 
